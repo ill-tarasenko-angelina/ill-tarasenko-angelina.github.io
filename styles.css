@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(21, 122, 124);
+    color: rgb(209,232,226);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+header {
+    width: 95%;
+    max-width: 788px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px;
+    margin-top: 15px;
+}
+h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.button-link {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-color: rgb(209,232,226);
+    margin-left: 10px;
+    margin-top: 10px;
+    color: rgb(17,100,102);
+    text-transform: lowercase;
+    text-decoration:Verdana, Tahoma, sans-serif;
+}
+.button-link:hover {
+    background-color: rgb(32, 211, 202);
+    color: rgb(17,100,102);
+}
+
+.container {
+    width: 90%;
+    max-width: 680px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    height: 400px;
+    width: 400px;
+    border-radius: 280px;
+    overflow: hidden;
+    border: 1px solid rgb(209,232,226);
+    background-image: linear-gradient(-225deg, rgb(32, 211, 202) 0%, #FFE4B5 60%);
+    animation: ava-animate 15s infinite alternate;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+}
+
+.image-container img {
+    height: 105%;
+    animation: ava-bg 10s infinite alternate
+}
+  @media screen and (max-width: 300px) {
+    .container {
+      padding-top: 30px;
+    }
+  
+    .container__container {
+      grid-row-gap: 20px;
+    }
+  
+    .container__title {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+  
+    .container__subtitle {
+      font-size: 22px;
+      font-weight: 400;
+    }
+  
+    .container__description {
+      font-size: 14px;
+    }
+  
+    .container__about {
+      text-align: center;
+    }
+  
+    .container__links {
+      justify-content: center;
+    }
+  
+    .container__box {
+      max-width: 350px;
+      justify-self: center;
+    }
+  }
+  
+  
+@keyframes ava-animate {
+    0% {
+      border-radius: 62% 38% 62% 38% / 67% 32% 68% 33%;
+    }
+  
+    40% {
+      border-radius: 37% 63% 53% 47% / 67% 32% 68% 33%;
+    }
+  
+    60% {
+      border-radius: 23% 77% 39% 61% / 78% 54% 46% 32%;
+    }
+  
+    100% {
+      border-radius: 18% 62% 24% 76% / 43% 54% 46% 57%;
+    }
+  }
+  
+  @keyframes ava-bg {
+    from {
+      backdrop-filter: hue-rotate(0);
+    }
+  
+    to {
+      backdrop-filter: hue-rotate(90deg);
+    }
+  }
+.icon{
+    margin: 4px 8px;
+    width: 44px;
+    height: 44px;
+}
+
+.social{
+    width: 100%;
+    height: 10vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+   
+  .social__icon{
+    text-decoration: none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    background-color: rgb(209,232,226);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #00000080;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow:hidden;
+  }
+  
+  .social__icon i {
+    font-size: 26px;
+    color: #67798e;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  
+  .social__icon:after{
+    content: "";
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    transform: translate(0, 70px);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .social__icon.resume:after{
+    background-color: #FF0000;
+  }
+  .social__icon.telegram:after{
+    background-color: #3b5998;
+  }
+  .social__icon.git:after{
+    background-color: #8B008B;
+  }
+  .social__icon.vk:after{
+    background-color: #00acee;
+  }
+  .social__icon.whatsapp:after{
+    background-color: #32CD32;
+  }
+  .social__icon.mail:after{
+    background-color: #FFD700;
+  }
+  .social__icon:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 0px 15px #00000080;
+  }
+  
+  .social__icon:hover i{
+     color: rgb(209,232,226);
+  }
+  
+  .social__icon:hover:after{
+    transform: translate(0);
+  }
